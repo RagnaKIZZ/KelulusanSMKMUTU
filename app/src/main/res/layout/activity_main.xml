@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+
+        android:src="@drawable/grad"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:elevation="@dimen/_3sdp"
+                android:background="@drawable/bg_linear"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_25sdp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="@dimen/_300sdp">
+
+                <ImageView
+                    android:id="@+id/img_mutu"
+                    android:transitionName="@string/foto"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/logo_md"
+                    tools:targetApi="lollipop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:text="Aplikasi Cek Kelulusan \n SMK 1 Muhammadiyah \n Rangkasbitung"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_nisn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_nisn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="NISN"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_submit"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="Submit"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_submit"
+                    android:layout_below="@+id/layout_nisn"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ahmedt.kelulusanapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_md"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/confignetwork"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noActBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noActBar" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noActBar">
+
+        </activity>
+    </application>
+
+</manifest>
